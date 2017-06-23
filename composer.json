@@ -1,0 +1,32 @@
+{
+  "name": "maenbn/openamauth-laravel",
+  "description": "OpenAM Authentication driver for Laravel",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ben Norcombe",
+      "email": "b.norcombe@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/contracts": "5.2.*",
+    "illuminate/support": "5.2.*",
+    "maenbn/openamauth": "^4.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "3.2.*",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Maenbn\\OpenAmAuthLaravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Maenbn\\Tests\\OpenAmAuthLaravel\\": "tests/"
+    }
+  }
+}
