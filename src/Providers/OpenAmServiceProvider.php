@@ -21,16 +21,16 @@ class OpenAmServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->setupConfig();
-        $this->app['auth']->provider('openamauth', function ($app) {
+        $this->app['auth']->provider('openam', function ($app) {
 
-            if (!$app['config']['openamauth']) {
+            if (!$app['config']['openam']) {
                 throw new ConfigNotFound();
             }
-            $config = ConfigFactory::create($app['config']['openamauth']);
+            $config = ConfigFactory::create($app['config']['openam']);
             $openAm = OpenAmFactory::create($config);
-            $app['config']['openamauth.cookieName'] = $config->getCookieName();
+            $app['config']['openam.cookieName'] = $config->getCookieName();
 
-            return UserProviderFactory::create($app['config']['openamauth'], $openAm);
+            return UserProviderFactory::create($app['config']['openam'], $openAm);
         });
     }
 
@@ -41,9 +41,9 @@ class OpenAmServiceProvider extends ServiceProvider
      */
     protected function setupConfig()
     {
-        $source = realpath(__DIR__ . '/../../config/openamauth.php');
-        $this->publishes([$source => config_path('openamauth.php')]);
-        $this->mergeConfigFrom($source, 'openamauth');
+        $source = realpath(__DIR__ . '/../../config/openam.php');
+        $this->publishes([$source => config_path('openam.php')]);
+        $this->mergeConfigFrom($source, 'openam');
     }
 
     /**
@@ -63,7 +63,7 @@ class OpenAmServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'openamauth'
+            'openam'
         ];
     }
 }
