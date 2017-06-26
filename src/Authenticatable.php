@@ -59,6 +59,6 @@ trait Authenticatable
      */
     public function getRememberTokenName()
     {
-        return 'remember_me';
+        return 'remember_token';
     }
 }
