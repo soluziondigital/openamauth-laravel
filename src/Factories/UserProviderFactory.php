@@ -16,7 +16,7 @@ class UserProviderFactory
     public static function create(array $config, OpenAm $openAm)
     {
         $model = ModelFactory::create($config['eloquentUser']);
-        $userRepository = UserRepositoryFactory::create($config['eloquentUidName'], $config['eloquentUser']);
+        $userRepository = UserRepositoryFactory::create($config['eloquentUidName'], $model);
         $userMapper = UserMapperFactory::create($userRepository);
 
         return new OpenAmUserProvider($openAm, $model, $userMapper);
