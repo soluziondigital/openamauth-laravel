@@ -11,13 +11,14 @@ class OpenAmUserTest extends TestCase
     {
         $user = new OpenAmUser();
         $user->tokenId = '3hjfsa9sdf09';
+        $user->remember_me = 'dafaerwerui';
         $user->password = 'secret';
         $this->assertEquals('tokenId', $user->getAuthIdentifierName());
         $this->assertEquals('3hjfsa9sdf09', $user->getAuthIdentifier());
         $this->assertEquals('secret', $user->getAuthPassword());
-        $this->assertEquals('3hjfsa9sdf09', $user->getRememberToken());
-        $this->assertEquals('tokenId', $user->getRememberTokenName());
+        $this->assertEquals('dafaerwerui', $user->getRememberToken());
+        $this->assertEquals('remember_me', $user->getRememberTokenName());
         $user->setRememberToken('newToken');
-        $this->assertEquals('newToken', $user->getAuthIdentifier());
+        $this->assertEquals('newToken', $user->getRememberToken());
     }
 }

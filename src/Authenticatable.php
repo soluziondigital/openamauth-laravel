@@ -59,6 +59,6 @@ trait Authenticatable
      */
     public function getRememberTokenName()
     {
-        return $this->getAuthIdentifierName();
+        return 'remember_me';
     }
 }
