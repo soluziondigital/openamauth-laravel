@@ -89,24 +89,4 @@ class UserProviderTest extends TestCase
         );
         $this->assertTrue($valid);
     }
-
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Not implemented
-     */
-    public function testRetrieveByToken()
-    {
-        $this->mockUserProvider();
-        $this->userProvider->retrieveByToken('asdfasdf', 'fadsfasdf');
-    }
-
-    /**
-     * @expectedException \Exception
-     * @expectedExceptionMessage Not implemented
-     */
-    public function testUpdateRememberToken()
-    {
-        $this->mockUserProvider();
-        $this->userProvider->updateRememberToken($this->mockUser, '543h534jif');
-    }
 }

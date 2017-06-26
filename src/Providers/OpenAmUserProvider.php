@@ -62,11 +62,9 @@ class OpenAmUserProvider implements UserProvider
      * @param  mixed $identifier
      * @param  string $token
      * @return Authenticatable|null
-     * @throws Exception
      */
     public function retrieveByToken($identifier, $token)
     {
-        throw new Exception('Not implemented');
     }
 
     /**
@@ -75,11 +73,9 @@ class OpenAmUserProvider implements UserProvider
      * @param  \Illuminate\Contracts\Auth\Authenticatable $user
      * @param  string $token
      * @return void
-     * @throws Exception
      */
     public function updateRememberToken(Authenticatable $user, $token)
     {
-        throw new Exception('Not implemented');
     }
 
     /**
