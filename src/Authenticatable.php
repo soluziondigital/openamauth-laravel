@@ -8,7 +8,7 @@ trait Authenticatable
 
     public function getAuthIdentifierName()
     {
-        return 'tokenId';
+        return config('openam.identifierName');
     }
 
     /**

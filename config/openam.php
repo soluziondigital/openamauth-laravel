@@ -14,5 +14,7 @@ return [
 
     'eloquentUser' => null,
 
-    'eloquentUidName' => 'uid'
+    'eloquentUidName' => 'uid',
+
+    'identifierName' => 'tokenId'
 ];
