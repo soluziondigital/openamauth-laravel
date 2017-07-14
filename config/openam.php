@@ -16,5 +16,7 @@ return [
 
     'eloquentUidName' => 'uid',
 
+    'eloquentGuestUid' => null,
+
     'identifierName' => 'tokenId'
 ];

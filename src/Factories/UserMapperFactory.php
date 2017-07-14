@@ -10,11 +10,12 @@ class UserMapperFactory
 {
     /**
      * @param UserRepository|null $userRepository
+     * @param string|null $eloquentGuestUid
      * @return UserMapper
      */
-    public static function create(UserRepository $userRepository = null)
+    public static function create(UserRepository $userRepository = null, $eloquentGuestUid = null)
     {
-        return new UserMapper($userRepository);
+        return new UserMapper($userRepository, $eloquentGuestUid);
     }
 
 }

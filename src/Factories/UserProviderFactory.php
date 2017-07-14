@@ -22,7 +22,7 @@ class UserProviderFactory
             $modelForRepository = null;
         }
         $userRepository = UserRepositoryFactory::create($config['eloquentUidName'], $modelForRepository);
-        $userMapper = UserMapperFactory::create($userRepository);
+        $userMapper = UserMapperFactory::create($userRepository, $config['eloquentGuestUid']);
 
         return new OpenAmUserProvider($openAm, $model, $userMapper);
     }

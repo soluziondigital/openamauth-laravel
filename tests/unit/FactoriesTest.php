@@ -36,7 +36,9 @@ class FactoriesTest extends TestCase
 
         'eloquentUser' => null,
 
-        'eloquentUidName' => 'uid'
+        'eloquentUidName' => 'uid',
+
+        'eloquentGuestUid' => null
     ];
 
     public function testConfigFactory()

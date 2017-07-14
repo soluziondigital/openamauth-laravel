@@ -14,9 +14,15 @@ class UserMapper implements \Maenbn\OpenAmAuthLaravel\Contracts\UserMapper
      */
     private $userRepository;
 
-    public function __construct(UserRepository $userRepository = null)
+    /**
+     * @var string
+     */
+    private $eloquentGuestUid;
+
+    public function __construct(UserRepository $userRepository = null, $eloquentGuestUid = null)
     {
         $this->userRepository = $userRepository;
+        $this->eloquentGuestUid = $eloquentGuestUid;
     }
 
     /**
@@ -58,6 +64,10 @@ class UserMapper implements \Maenbn\OpenAmAuthLaravel\Contracts\UserMapper
      */
     private function getAttributes(Authenticatable $user)
     {
-        return $this->userRepository->findByUid($user->uid)->toArray();
+        $user = $this->userRepository->findByUid($user->uid);
+        if(is_null($user)){
+            $user = $this->userRepository->findByUid($this->eloquentGuestUid);
+        }
+        return $user->toArray();
     }
 }

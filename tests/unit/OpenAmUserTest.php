@@ -1,7 +1,6 @@
 <?php
 namespace Maenbn\Tests\OpenAmAuthLaravel;
 
-
 use Maenbn\OpenAmAuthLaravel\OpenAmUser;
 use PHPUnit\Framework\TestCase;
 
