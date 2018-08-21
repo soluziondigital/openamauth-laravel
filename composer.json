@@ -9,6 +9,12 @@
       "email": "b.norcombe@gmail.com"
     }
   ],
+  "repositories": [
+    {
+      "url": "https://github.com/dimoniet/openamauth-laravel.git",
+      "type": "git"
+    }
+  ],
   "require": {
     "php": ">=5.5.9",
     "illuminate/contracts": "~5.0",
