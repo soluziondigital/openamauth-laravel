@@ -90,7 +90,7 @@ class OpenAmUserProvider implements UserProvider
             return null;
         }
 
-        if($this->openAm->authenticate($credentials['username'], $credentials['password'])){
+        if($this->openAm->authenticate($credentials['name'], $credentials['password'])){
             return $this->userMapper->map($this->openAm, $this->user);
         }
 

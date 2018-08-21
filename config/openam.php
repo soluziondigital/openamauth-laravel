@@ -4,6 +4,10 @@ return [
 
     'uri' => null,
 
+    'adminUser' => null,
+
+    'adminPassword' => null,
+
     'realm' => null,
 
     'cookiePath' => null,

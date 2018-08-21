@@ -33,7 +33,7 @@ class SetOpenAmCookie
      */
     public function handle($request, Closure $next)
     {
-        $openAmConfig = $this->app['config']['openamauth'];
+        $openAmConfig = $this->app['config']['openam'];
         $user = $this->auth->user();
         if(!$request->hasCookie($openAmConfig['cookieName']) && isset($user))
         {
