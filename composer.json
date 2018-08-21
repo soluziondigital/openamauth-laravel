@@ -1,7 +1,6 @@
 {
   "name": "maenbn/openamauth-laravel",
   "description": "OpenAM Authentication driver for Laravel",
-  "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
