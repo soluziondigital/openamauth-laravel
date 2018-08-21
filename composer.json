@@ -11,7 +11,7 @@
   ],
   "repositories": [
     {
-      "url": "https://github.com/dimoniet/openamauth-laravel.git",
+      "url": "https://github.com/dimoniet/openamauth.git",
       "type": "git"
     }
   ],
@@ -19,7 +19,7 @@
     "php": ">=5.5.9",
     "illuminate/contracts": "~5.0",
     "illuminate/support": "~5.0",
-    "maenbn/openamauth": "^4.0"
+    "maenbn/openamauth": "dev-master"
   },
   "require-dev": {
     "orchestra/testbench": "3.2.*",
