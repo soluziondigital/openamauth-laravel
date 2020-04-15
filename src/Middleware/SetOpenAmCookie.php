@@ -42,7 +42,7 @@ class SetOpenAmCookie
                 cookie(
                     $openAmConfig['cookieName'],
                     $user->getAuthIdentifier(),
-                    0,
+                    $openAmConfig['cookieDuration'],
                     $openAmConfig['cookiePath'],
                     $openAmConfig['cookieDomain']
                 )
